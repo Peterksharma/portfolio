@@ -6,9 +6,14 @@ Z-index
 100-200 
 */
 
-body{
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     background-color: #011329;
 }
+
 
 .about-me-name{
     position: absolute;
@@ -40,9 +45,9 @@ body{
 
 #home-side-img {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
+    top: -10vh;
+    left: -13vh;
+    height: 150%;
     z-index: 2;
 }
 
@@ -60,8 +65,8 @@ body{
     height: 60vh;
     z-index: 50;
     object-position: left;
-    transition: transform 6s ease-in-out;
-    transform-origin: center;
+    /* transition: transform 6s ease-in-out;
+    transform-origin: center; */
 }
 
 .bar-container {
@@ -75,7 +80,7 @@ body{
 }
 
 .rectangle {
-    width: 60vh;
+    width: 55vh;
     height: 4vh;
     margin: 5px;
 }
@@ -117,9 +122,3 @@ canvas {
     position: absolute;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
