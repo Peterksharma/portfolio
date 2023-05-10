@@ -1,0 +1,125 @@
+/* 
+Z-index
+1-10
+20-50
+50- 100
+100-200 
+*/
+
+body{
+    background-color: #011329;
+}
+
+.about-me-name{
+    position: absolute;
+    left: 43%;
+    top: 20%;
+    z-index: 55;
+}
+
+#my-name {
+    color: #FFAF00;
+    font-size: 15vh;
+    margin-bottom: -150px;
+    font-family: 'Anton', sans-serif;
+}  
+
+#last-name {
+    color: #3C7F72;
+    font-size: 10vh;
+    margin-bottom: -55px;
+    border-bottom: .5vh solid #F4DDB5;
+    font-family: 'Anton', sans-serif;
+}  
+
+#my-title {
+    color: #F4DDB5;
+    font-size: 7vh;
+    font-family: 'Dancing Script', cursive;
+}  
+
+#home-side-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 2;
+}
+
+#dots-dots-dots {
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    opacity: 50%;
+}
+
+#chillen-astro{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    height: 60vh;
+    z-index: 50;
+    object-position: left;
+    transition: transform 6s ease-in-out;
+    transform-origin: center;
+}
+
+.bar-container {
+    position: absolute;
+    top: 40%;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.rectangle {
+    width: 60vh;
+    height: 4vh;
+    margin: 5px;
+}
+
+#menu-icon{
+    position: absolute;
+    left: 90%;
+    height: 5%;
+    top: 10%
+}
+
+#menu-icon:hover{
+    opacity: 85%;
+    transform: scale(1.1);
+}
+
+.navigation {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 40;
+    color: white;
+    font-size: 5vh;
+    font-family: 'Anton', sans-serif;
+}
+
+.links {
+    width: 60vh;
+    height: 5vh;
+    margin-top: 5%;
+    text-align: right;
+}
+
+canvas {
+    background: #011329;
+    position: absolute;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}

@@ -8,6 +8,7 @@ function Star(x, y, r, color) {
     this.color = color;
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
 Star.prototype = {
     constructor: Star,
     render: function () {
