@@ -48,7 +48,7 @@ html, body {
     top: -10vh;
     left: -13vh;
     height: 150%;
-    z-index: 2;
+    z-index: 3;
 }
 
 #dots-dots-dots {
@@ -67,22 +67,6 @@ html, body {
     object-position: left;
     /* transition: transform 6s ease-in-out;
     transform-origin: center; */
-}
-
-.bar-container {
-    position: absolute;
-    top: 40%;
-    left: -10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 10;
-}
-
-.rectangle {
-    width: 55vh;
-    height: 4vh;
-    margin: 5px;
 }
 
 #menu-icon{
@@ -122,3 +106,10 @@ canvas {
     position: absolute;
 }
 
+#planet {
+    left: -10%;
+    top: -10%;
+    position: absolute;
+    height: 95vh;
+    z-index: 2;
+}
