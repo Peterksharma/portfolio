@@ -8,7 +8,6 @@ function Star(x, y, r, color) {
     this.color = color;
 }
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
 Star.prototype = {
     constructor: Star,
     render: function () {
@@ -59,8 +58,9 @@ function animate() {
       Remove comments below these for a cool trailing effect & comment
       out the context.clearRect.
     */
-    context.fillStyle = 'rgba(255, 255, 255, .1)';
-    context.fillRect(0,0,C_WIDTH,C_HEIGHT);
+    // context.fillStyle = 'rgba(255, 255, 255, .1)';
+    context.fillStyle = 'rgba(1, 19, 41, 1)';
+    // context.fillRect(0,0,C_WIDTH,C_HEIGHT);
     context.clearRect(0, 0, C_WIDTH, C_HEIGHT);
     for (var i = 0; i < arrStars.length; i++) {
         arrStars[i].render();
