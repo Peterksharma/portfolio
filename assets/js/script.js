@@ -1,21 +1,3 @@
-// var image = document.getElementById('chillen-astro');
-// var isRotatedLeft = false;
-
-
-// //add a small skew function as the same time to make it feel 3D
-// function rotate() {
-//     if(isRotatedLeft) {
-//         image.style.transform = 'rotate(0deg)';
-//         isRotatedLeft = false;
-//     } else {
-//         image.style.transform = 'rotate(-10deg)';
-//         isRotatedLeft = true;
-//     }
-// }
-
-// setInterval(rotate, 3000); // Rotate every 3 seconds
-
-
 //Tracks the mouse movement across the screen and logs the value
 const parrallax_effectl = document.querySelectorAll(".movement")
 const parrallax_effectr = document.querySelectorAll(".movementr")

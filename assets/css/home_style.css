@@ -69,14 +69,14 @@ html, body {
     transform-origin: center; */
 }
 
-#menu-icon{
+#hamburgerbtn{
     position: absolute;
     left: 90%;
     height: 5%;
     top: 10%
 }
 
-#menu-icon:hover{
+#hamburgerbtn:hover{
     opacity: 85%;
     transform: scale(1.1);
 }
@@ -112,4 +112,8 @@ canvas {
     position: absolute;
     height: 95vh;
     z-index: 2;
+}
+
+.hidden {
+    display: none;
 }
