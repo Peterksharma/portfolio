@@ -47,7 +47,7 @@ html, body {
     position: absolute;
     top: -10vh;
     left: -13vh;
-    height: 150%;
+    height: 120%;
     z-index: 3;
 }
 
@@ -83,8 +83,8 @@ html, body {
 
 .navigation {
     position: absolute;
-    top: 10%;
-    right: 2%;
+    top: 20%;
+    right: 7.8%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,13 +92,23 @@ html, body {
     color: white;
     font-size: 5vh;
     font-family: 'Anton', sans-serif;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
 }
 
 .links {
     width: 60vh;
     height: 5vh;
-    margin-top: 5%;
+    margin-top: 10%;
     text-align: right;
+    letter-spacing: 2px;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
 
 canvas {
@@ -108,12 +118,13 @@ canvas {
 
 #planet {
     left: -10%;
-    top: -10%;
     position: absolute;
-    height: 95vh;
+    height: 100vh;
     z-index: 2;
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
 }
