@@ -97,7 +97,7 @@ html, body {
     transition: opacity 0.5s;
 }
 
-.links {
+.navLinks {
     width: 60vh;
     height: 5vh;
     margin-top: 10%;
@@ -117,7 +117,8 @@ canvas {
 }
 
 #planet {
-    left: -10%;
+    left: -13%;
+    bottom: 5%;
     position: absolute;
     height: 100vh;
     z-index: 2;
