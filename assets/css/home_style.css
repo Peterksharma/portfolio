@@ -73,7 +73,8 @@ html, body {
     position: absolute;
     left: 90%;
     height: 5%;
-    top: 10%
+    top: 10%;
+    z-index: 9999;
 }
 
 #hamburgerbtn:hover{
@@ -114,6 +115,11 @@ html, body {
 canvas {
     background: #011329;
     position: absolute;
+}
+
+.navLinks:hover {
+    color: #F4DDB5;
+    transform: scale(1.02)
 }
 
 #planet {
