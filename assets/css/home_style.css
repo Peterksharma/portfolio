@@ -27,6 +27,7 @@ html, body {
     font-size: 15vh;
     margin-bottom: -150px;
     font-family: 'Anton', sans-serif;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
 }  
 
 #last-name {
@@ -35,12 +36,14 @@ html, body {
     margin-bottom: -55px;
     border-bottom: .5vh solid #F4DDB5;
     font-family: 'Anton', sans-serif;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5)
 }  
 
 #my-title {
     color: #F4DDB5;
     font-size: 7vh;
     font-family: 'Dancing Script', cursive;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5)
 }  
 
 #home-side-img {
@@ -103,6 +106,7 @@ html, body {
     height: 5vh;
     margin-top: 10%;
     text-align: right;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5)
     letter-spacing: 2px;
     animation: fadeIn 3s;
 }
@@ -123,7 +127,7 @@ canvas {
 }
 
 #planet {
-    left: -13%;
+    left: -10%;
     bottom: 5%;
     position: absolute;
     height: 100vh;
