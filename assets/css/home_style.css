@@ -1,9 +1,21 @@
 /* 
 Z-index
 1-10
+2: #planet
+3: #home-side-image
+
 20-50
+40: .navigation
+
 50- 100
-100-200 
+50: #Chillen-astro
+55: .About-me-name 
+
+60: #displayBoxMain
+
+100-200
+200+
+9999: Hamburger Menu
 */
 
 html, body {
@@ -12,14 +24,24 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #011329;
+    cursor: url("../images/icons/cursors/2.png"), auto;
 }
 
-
-.about-me-name{
+.displayBoxMain {
+    z-index: 600;
+    height: 75vh;
+    width: 60vw; 
+    opacity: 0;
+    background-color: black;
     position: absolute;
-    left: 43%;
-    top: 20%;
-    z-index: 55;
+    top: 15vh;
+    left: 30vh;
+    border-radius: 2%;
+}
+
+@keyframes fadeInBox {
+    0% {opacity: 0; }
+    100% {opacity: .75; }
 }
 
 #my-name {
@@ -85,6 +107,13 @@ html, body {
     transform: scale(1.1);
 }
 
+.about-me-name{
+    position: absolute;
+    left: 43%;
+    top: 20%;
+    z-index: 55;
+}
+
 .navigation {
     position: absolute;
     top: 20%;
@@ -106,7 +135,7 @@ html, body {
     height: 5vh;
     margin-top: 10%;
     text-align: right;
-    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5)
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
     animation: fadeIn 3s;
 }
