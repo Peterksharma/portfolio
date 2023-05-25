@@ -15,8 +15,20 @@ Z-index
 
 100-200
 200+
+200: .AboutMe
 9999: Hamburger Menu
 */
+
+/* CSS Variables */
+
+:root{
+    --shadow-x: 2px;
+    --shadow-y: 2px;
+    --shadow-blur: 4px;
+    --shadow-color: rgba(0, 0, 0, 0.5)
+}
+
+/* Main Content */
 
 html, body {
     height: 100%;
@@ -35,13 +47,16 @@ html, body {
     background-color: black;
     position: absolute;
     top: 15vh;
-    left: 30vh;
+    left: 20vh;
     border-radius: 2%;
+    border: 4mm ridge #3C7F72 ;
+    box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);;
+
 }
 
 @keyframes fadeInBox {
     0% {opacity: 0; }
-    100% {opacity: .75; }
+    100% {opacity: .85; }
 }
 
 #my-name {
@@ -49,7 +64,7 @@ html, body {
     font-size: 15vh;
     margin-bottom: -150px;
     font-family: 'Anton', sans-serif;
-    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);;
 }  
 
 #last-name {
@@ -58,14 +73,14 @@ html, body {
     margin-bottom: -55px;
     border-bottom: .5vh solid #F4DDB5;
     font-family: 'Anton', sans-serif;
-    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5)
+    text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
 }  
 
 #my-title {
     color: #F4DDB5;
     font-size: 7vh;
     font-family: 'Dancing Script', cursive;
-    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5)
+    text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
 }  
 
 #home-side-img {
@@ -135,7 +150,7 @@ html, body {
     height: 5vh;
     margin-top: 10%;
     text-align: right;
-    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
     letter-spacing: 2px;
     animation: fadeIn 3s;
 }
@@ -167,4 +182,18 @@ canvas {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.aboutMe {
+    position: absolute;
+    padding: 3%;
+    z-index: 200;
+    color: white;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 5vh;
+    text-align: center;
+    color:#FFAF00;
 }

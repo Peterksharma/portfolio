@@ -14,7 +14,7 @@ const resumeLink = document.getElementById('resumeLink')
 const contactMeLink = document.getElementById('contactMelink')
 
 const mainContent = document.querySelectorAll('.mainContent')
-const aboutMeContent = document.querySelector('aboutMe')
+const aboutMeContent = document.getElementById('aboutMeContent')
 
 const mainBox = document.querySelector('.displayBoxMain')
 
@@ -52,40 +52,58 @@ hamburgerbtn.addEventListener('click', function() {
     }
 });
 
-//Hiding the nameTitle
-//About Me
+//nameTitle Fade out with Box Fade In
+
+function hideNameShowBox () {
+    nameTitle.classList.add('hidden');
+    setTimeout(function(){
+        mainBox.style.animation = "none";
+        mainBox.offsetHeight; //Trigggers a reflow, flushing the CSS elements
+        mainBox.classList.remove('hidden');
+        mainBox.style.animation = "fadeInBox 2s forwards"
+    }, 1000);
+}
+
+
+//About Me, when clicked will hide the home screen and display the content box
 aboutMeLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
-        nameTitle.classList.add('hidden');
+        hideNameShowBox ();
         setTimeout(function(){
-            mainBox.style.animation = "none";
-            mainBox.offsetHeight; //Trigggers a reflow, flushing the CSS elements
-            mainBox.classList.remove('hidden');
-            mainBox.style.animation = "fadeInBox 2s forwards"
-        }, 1000);
-    } 
+            if (!mainBox.classList.contains('hidden')) {
+                aboutMeContent.classList.remove('hidden')
+            }
+        }, 500)
+    } else if (!aboutMeContent.classList.contains('hidden')){
+        aboutMeContent.classList.add('hidden')
+    } else {
+        aboutMeContent.classList.remove('hidden')
+        aboutMeContent.style.animation = "fadeIn 2s forwards"
+
+    }
 })
+
 //Projects
 projectsLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
-        nameTitle.classList.add('hidden');
+        hideNameShowBox ();
     } 
 })
 //Tech Stack
 techStackLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
-        nameTitle.classList.add('hidden');
+        hideNameShowBox ();
     } 
 })
 //Resume
 resumeLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
-        nameTitle.classList.add('hidden');
+        hideNameShowBox ();
     } 
 })
 //Contact Me
 contactMeLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
-        nameTitle.classList.add('hidden');
+        hideNameShowBox ();
     } 
 })
