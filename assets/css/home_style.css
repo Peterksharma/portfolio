@@ -39,6 +39,11 @@ html, body {
     cursor: url("../images/icons/cursors/2.png"), auto;
 }
 
+/* Keeps Cursor for the links */
+a {
+    cursor: url("../images/icons/cursors/2.png"), auto;
+}
+
 .displayBoxMain {
     z-index: 600;
     height: 75vh;
@@ -53,7 +58,13 @@ html, body {
     box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);;
     display: flex;
     justify-content: center;
-    align-items: end;
+    /* align-items: end; */
+}
+
+.mainContent {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
 }
 
 @keyframes fadeInBox {
@@ -205,9 +216,9 @@ h2 {
 .techStack {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    /* grid-gap: 10px; */
-    justify-items: center;
-    align-items: center;
+    grid-gap: 10vh;
+    justify-content: center;
+    align-content: center;
 }
 
 .stack {
@@ -219,10 +230,11 @@ h2 {
 }
 
 .stack img {
-    width: 40%;
+    width: 50%;
 }
 
 .stack h3 {
+    display: none;
     color: white;
     text-transform: uppercase;
     text-align: center;
