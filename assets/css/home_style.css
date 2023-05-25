@@ -51,7 +51,9 @@ html, body {
     border-radius: 2%;
     border: 4mm ridge #3C7F72 ;
     box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);;
-
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 @keyframes fadeInBox {
@@ -192,8 +194,36 @@ canvas {
     font-size: 20px;
 }
 
+/* h2 are used in about ME title */
 h2 {
     font-size: 5vh;
     text-align: center;
     color:#FFAF00;
+}
+
+/* .techStack is used for the grid display of the icons */
+.techStack {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    /* grid-gap: 10px; */
+    justify-items: center;
+    align-items: center;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.stack img {
+    width: 40%;
+}
+
+.stack h3 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
 }

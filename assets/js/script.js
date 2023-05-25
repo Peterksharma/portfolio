@@ -13,9 +13,15 @@ const techStackLink = document.getElementById('techStackLink')
 const resumeLink = document.getElementById('resumeLink')
 const contactMeLink = document.getElementById('contactMelink')
 
+//Consts for the main content
 const mainContent = document.querySelectorAll('.mainContent')
 const aboutMeContent = document.getElementById('aboutMeContent')
+const projects = document.getElementById('projects')
+const techStach = document.getElementById('techStack')
+const resume = document.getElementById('resume')
+const contactMe = document.getElementById('contactMe')
 
+//Black Display Box for the main content data
 const mainBox = document.querySelector('.displayBoxMain')
 
 //Parallax Effect
@@ -53,7 +59,6 @@ hamburgerbtn.addEventListener('click', function() {
 });
 
 //nameTitle Fade out with Box Fade In
-
 function hideNameShowBox () {
     nameTitle.classList.add('hidden');
     setTimeout(function(){
