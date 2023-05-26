@@ -44,6 +44,25 @@ a {
     cursor: url("../images/icons/cursors/2.png"), auto;
 }
 
+
+
+/* .displayBoxMain {
+    z-index: 600;
+    height: 75vh;
+    width: 60vw; 
+    opacity: 0;
+    background-color: black;
+    position: absolute;
+    top: 15vh;
+    left: 20vh;
+    border-radius: 2%;
+    border: 4mm ridge #3C7F72 ;
+    box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
 .displayBoxMain {
     z-index: 600;
     height: 75vh;
@@ -55,15 +74,26 @@ a {
     left: 20vh;
     border-radius: 2%;
     border: 4mm ridge #3C7F72 ;
-    box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);;
+    box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
+    display: flex;
+}
+
+.techStackContainer {
+    position: relative;
     display: flex;
     justify-content: center;
-    /* align-items: end; */
+    /* align-items: center; */
+}
+
+.centeredContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* This makes sure the container takes up all the space in the parent, so centering takes up the full height */
 }
 
 .mainContent {
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
 }
 
@@ -193,7 +223,8 @@ canvas {
 
 .hidden {
     opacity: 0;
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden; */
     transition: opacity 0.5s, visibility 0s 0.5s;
 }
 
@@ -203,6 +234,7 @@ canvas {
     z-index: 200;
     color: white;
     font-size: 20px;
+    top: -30px;
 }
 
 /* h2 are used in about ME title */
@@ -230,7 +262,13 @@ h2 {
 }
 
 .stack img {
-    width: 50%;
+    width: 40%;
+}
+
+.stack:hover {
+    width: 105%;
+    filter: drop-shadow(4px 4px 4px black)
+    
 }
 
 .stack h3 {
