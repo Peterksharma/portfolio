@@ -20,8 +20,8 @@ Z-index
 */
 
 /* CSS Variables */
-
 :root{
+    /* Drop Shadow Properties */
     --shadow-x: 2px;
     --shadow-y: 2px;
     --shadow-blur: 4px;
@@ -29,7 +29,6 @@ Z-index
 }
 
 /* Main Content */
-
 html, body {
     height: 100%;
     width: 100%;
@@ -43,25 +42,6 @@ html, body {
 a {
     cursor: url("../images/icons/cursors/2.png"), auto;
 }
-
-
-
-/* .displayBoxMain {
-    z-index: 600;
-    height: 75vh;
-    width: 60vw; 
-    opacity: 0;
-    background-color: black;
-    position: absolute;
-    top: 15vh;
-    left: 20vh;
-    border-radius: 2%;
-    border: 4mm ridge #3C7F72 ;
-    box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 .displayBoxMain {
     z-index: 600;
@@ -102,27 +82,45 @@ a {
     100% {opacity: .85; }
 }
 
-#my-name {
+/* #my-name {
     color: #FFAF00;
     font-size: 15vh;
     margin-bottom: -150px;
     font-family: 'Anton', sans-serif;
     text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);;
-}  
+}   */
+
+
+#my-name {
+    font-size: 15vh;
+    margin-bottom: -150px;
+    font-family: 'Nabla', cursive;
+    text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);;
+}
+
+@font-palette-values --nablaLast {
+    font-family: 'Nabla';
+    base-palette: 2;
+}
 
 #last-name {
-    color: #3C7F72;
+    font-palette: --nablaLast;
     font-size: 10vh;
     margin-bottom: -55px;
     border-bottom: .5vh solid #F4DDB5;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Nabla', cursive;
     text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
 }  
+@font-palette-values --nablaTitle {
+    font-family: 'Nabla';
+    base-palette: 6;
+    override-colors: 
+}
 
 #my-title {
-    color: #F4DDB5;
+    font-palette: --nablaTitle;
     font-size: 7vh;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Nabla', cursive;
     text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
 }  
 
@@ -158,11 +156,11 @@ a {
     height: 5%;
     top: 10%;
     z-index: 9999;
-}
-
-#hamburgerbtn:hover{
-    opacity: 85%;
-    transform: scale(1.1);
+    /* Nested Hoover Effect */
+    & :hover {
+        opacity: 85%;
+        transform: scale(1.1);
+    }
 }
 
 .about-me-name{
@@ -196,6 +194,10 @@ a {
     text-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-color);
     letter-spacing: 2px;
     animation: fadeIn 3s;
+    &:hover {
+        color: #F4DDB5;
+        transform: scale(1.02)
+    }
 }
 
 @keyframes fadeIn {
@@ -208,10 +210,10 @@ canvas {
     position: absolute;
 }
 
-.navLinks:hover {
+/* .navLinks:hover {
     color: #F4DDB5;
     transform: scale(1.02)
-}
+} */
 
 #planet {
     left: -10%;
@@ -259,21 +261,19 @@ h2 {
     align-items: center;
     justify-content: center;
     text-align: center;
+    &:hover {
+        width: 105%;
+        filter: drop-shadow(4px 4px 4px black)
+    }
+    & img {
+        width: 30%;
+    }
+    & h3 {
+        display: none;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
 }
 
-.stack img {
-    width: 40%;
-}
-
-.stack:hover {
-    width: 105%;
-    filter: drop-shadow(4px 4px 4px black)
-    
-}
-
-.stack h3 {
-    display: none;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-}
