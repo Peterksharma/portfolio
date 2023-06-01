@@ -101,6 +101,9 @@ a {
 @font-palette-values --nablaLast {
     font-family: 'Nabla';
     base-palette: 2;
+        
+
+    
 }
 
 #last-name {
@@ -113,8 +116,8 @@ a {
 }  
 @font-palette-values --nablaTitle {
     font-family: 'Nabla';
-    base-palette: 6;
-    override-colors: 
+    base-palette: 5;
+    override-colors: 7 red;
 }
 
 #my-title {
@@ -250,7 +253,7 @@ h2 {
 .techStack {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    grid-gap: 10vh;
+    grid-gap: 7vh;
     justify-content: center;
     align-content: center;
 }
@@ -269,7 +272,7 @@ h2 {
         width: 30%;
     }
     & h3 {
-        display: none;
+        display: ;
         color: white;
         text-transform: uppercase;
         text-align: center;
