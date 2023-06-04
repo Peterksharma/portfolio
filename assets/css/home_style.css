@@ -117,7 +117,9 @@ a {
 @font-palette-values --nablaTitle {
     font-family: 'Nabla';
     base-palette: 5;
-    override-colors: 7 red;
+    override-colors: 
+        3 black,
+        7 purple;
 }
 
 #my-title {
@@ -160,7 +162,7 @@ a {
     top: 10%;
     z-index: 9999;
     /* Nested Hoover Effect */
-    & :hover {
+    &:hover {
         opacity: 85%;
         transform: scale(1.1);
     }
@@ -240,6 +242,7 @@ canvas {
     color: white;
     font-size: 20px;
     top: -30px;
+    font-size: 2vh;
 }
 
 /* h2 are used in about ME title */
@@ -272,11 +275,13 @@ h2 {
         width: 30%;
     }
     & h3 {
-        display: ;
+        /* display: none; */
+        font-family: 'Courier New', Courier, monospace;
         color: white;
         text-transform: uppercase;
         text-align: center;
     }
 
 }
+
 

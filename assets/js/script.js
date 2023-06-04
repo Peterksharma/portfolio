@@ -10,6 +10,7 @@ const navigation = document.querySelector('.navigation')
 const aboutMeLink = document.getElementById('aboutMeLink')
 const projectsLink = document.getElementById('projectsLink')
 const techStackLink = document.getElementById('techStackLink')
+const techStackContainer = document.getElementById('techStackContainer')
 const resumeLink = document.getElementById('resumeLink')
 const contactMeLink = document.getElementById('contactMelink')
 
@@ -47,26 +48,88 @@ window.addEventListener('mousemove', (e) => {
 
 //Navigation
 
-
-//Fade-out Effect 
-hamburgerbtn.addEventListener('click', function() {
-    navigation.classList.toggle('hidden');
-    if (navigation.classList.contains('hidden')) {
-        navigation.classList.add('fade-out');
-    } else {
-        navigation.classList.remove('fade-out');
-    }
-});
-
 //nameTitle Fade out with Box Fade In
 function hideNameShowBox () {
     nameTitle.classList.add('hidden');
     setTimeout(function(){
         mainBox.style.animation = "none";
-        mainBox.offsetHeight; //Trigggers a reflow, flushing the CSS elements
+        // mainBox.offsetHeight; //Trigggers a reflow, flushing the CSS elements
         mainBox.classList.remove('hidden');
         mainBox.style.animation = "fadeInBox 2s forwards"
     }, 1000);
+    console.log('section 1')
+}
+
+//Fade-out Effect 
+hamburgerbtn.addEventListener('click', function() {
+    navigation.classList.toggle('hidden');
+    if (navigation.classList.contains('hidden')) {
+        console.log('section 1 hamburger')
+    } else {
+        navigation.classList.remove('fade-out');
+    }
+});
+
+//Functions to fade in content
+function unhideAboutMeContent () {
+    aboutMeContent.classList.remove('hidden');
+    aboutMeContent.style.animation = "fadeIn 2s forwards"
+}
+
+function unhideProjects () {
+    projects.classList.remove('hidden');
+    projects.style.animation = "fadeIn 2s forwards"
+}
+
+function unhideTechStack () {
+    techStackContainer.classList.remove('hidden');
+    techStackContainer.style.animation = "fadeIn 2s forwards"
+}
+
+function unhideResume () {
+    resume.classList.remove('hidden');
+    resume.style.animation = "fadeIn 2s forwards"
+}
+
+function unhideContactMe () {
+    contactMe.classList.remove('hidden');
+    contactMe.style.animation = "fadeIn 2s forwards"
+}
+
+//functions to hide content to not overlap other content
+function hideallthatisntAboutMeContent () {
+    projects.classList.add('hidden');
+    techStackContainer.classList.add('hidden');
+    resume.classList.add('hidden');
+    contactMe.classList.add('hidden');
+}
+
+function hideAllThatIsntTechStackContainer () {
+    aboutMeContent.classList.add('hidden');
+    projects.classList.add('hidden');
+    resume.classList.add('hidden');
+    contactMe.classList.add('hidden');
+}
+
+function hideAllThatIsntProjects () {
+    aboutMeContent.classList.add('hidden');
+    techStackContainer.classList.add('hidden');
+    resume.classList.add('hidden');
+    contactMe.classList.add('hidden');
+}
+
+function hideAllThatIsntResume () {
+    aboutMeContent.classList.add('hidden');
+    techStackContainer.classList.add('hidden');
+    projects.classList.add('hidden');
+    contactMe.classList.add('hidden');
+}
+
+function hideAllThatIsntContactMe () {
+    aboutMeContent.classList.add('hidden');
+    techStackContainer.classList.add('hidden');
+    projects.classList.add('hidden');
+    resume.classList.add('hidden');
 }
 
 
@@ -74,17 +137,15 @@ function hideNameShowBox () {
 aboutMeLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
         hideNameShowBox ();
-        setTimeout(function(){
-            if (!mainBox.classList.contains('hidden')) {
-                aboutMeContent.classList.remove('hidden')
-            }
-        }, 500)
+        unhideAboutMeContent ();
+        console.log('stage 1')
     } else if (!aboutMeContent.classList.contains('hidden')){
         aboutMeContent.classList.add('hidden')
+        console.log('stage 2')
     } else {
-        aboutMeContent.classList.remove('hidden')
-        aboutMeContent.style.animation = "fadeIn 2s forwards"
-
+        hideallthatisntAboutMeContent ();
+        unhideAboutMeContent ();
+        console.log('stage 3')
     }
 })
 
@@ -98,7 +159,15 @@ projectsLink.addEventListener('click', function() {
 techStackLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
         hideNameShowBox ();
-    } 
+        unhideTechStack ();
+    } else if (!techStackContainer.classList.contains('hidden')){
+        techStackContainer.classList.add('hidden')
+        console.log('button 2')
+    } else {
+        hideAllThatIsntTechStackContainer ();
+        unhideTechStack ();
+        console.log('button 3')
+    }
 })
 //Resume
 resumeLink.addEventListener('click', function() {
