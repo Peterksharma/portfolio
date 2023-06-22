@@ -13,12 +13,12 @@ const techStackLink = document.getElementById('techStackLink')
 const techStackContainer = document.getElementById('techStackContainer')
 const resumeLink = document.getElementById('resumeLink')
 const contactMeLink = document.getElementById('contactMelink')
-
+const homeLink = document.getElementById('returnHome')
 //Consts for the main content
 const mainContent = document.querySelectorAll('.mainContent')
 const aboutMeContent = document.getElementById('aboutMeContent')
 const projects = document.getElementById('projects')
-const techStach = document.getElementById('techStack')
+const techStack = document.getElementById('techStack')
 const resume = document.getElementById('resume')
 const contactMe = document.getElementById('contactMe')
 
@@ -69,6 +69,14 @@ hamburgerbtn.addEventListener('click', function() {
         navigation.classList.remove('fade-out');
     }
 });
+
+// Navigate Home
+homeLink.addEventListener('click', function() {
+    window.location.href = "../index.html";
+    console.log('home button pressed')
+});
+
+console.log(homeLink)
 
 //Functions to fade in content
 function unhideAboutMeContent () {
@@ -153,8 +161,18 @@ aboutMeLink.addEventListener('click', function() {
 projectsLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
         hideNameShowBox ();
-    } 
+        unhideProjects ();
+        console.log('stage 4')
+    } else if (!projects.classList.contains('hidden')){
+        projects.classList.add('hidden')
+        console.log('stage 5')
+    } else {
+        hideAllThatIsntProjects();
+        unhideProjects();
+        console.log('stage 6')
+    }
 })
+
 //Tech Stack
 techStackLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
@@ -173,11 +191,28 @@ techStackLink.addEventListener('click', function() {
 resumeLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
         hideNameShowBox ();
-    } 
+        unhideResume ();
+    } else if (!resume.classList.contains('hidden')){
+        resume.classList.add('hidden')
+        console.log('button 2')
+    } else {
+        hideAllThatIsntResume ();
+        unhideResume();
+        console.log('button 3')
+    }
 })
 //Contact Me
 contactMeLink.addEventListener('click', function() {
     if (!nameTitle.classList.contains('hidden')) {
         hideNameShowBox ();
-    } 
+        unhideContactMe ();
+    } else if (!contactMe.classList.contains('hidden')){
+        contactMe.classList.add('hidden')
+        console.log('button 2')
+    } else {
+        hideAllThatIsntContactMe ();
+        unhideContactMe();
+        console.log('button 3')
+    }
 })
+

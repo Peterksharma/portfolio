@@ -256,7 +256,7 @@ h2 {
 .techStack {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    grid-gap: 7vh;
+    grid-gap: 5vh;
     justify-content: center;
     align-content: center;
 }
@@ -272,7 +272,7 @@ h2 {
         filter: drop-shadow(4px 4px 4px black)
     }
     & img {
-        width: 30%;
+        width: 25%;
     }
     & h3 {
         /* display: none; */
@@ -284,4 +284,9 @@ h2 {
 
 }
 
+#resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
