@@ -137,12 +137,6 @@ a {
     z-index: 3;
 }
 
-#dots-dots-dots {
-    position: absolute;
-    height: 100vh;
-    right: 0;
-    opacity: 50%;
-}
 
 #chillen-astro{
     position: absolute;
@@ -252,6 +246,7 @@ h2 {
     color:#FFAF00;
 }
 
+
 /* .techStack is used for the grid display of the icons */
 .techStack {
     display: grid;
@@ -290,3 +285,26 @@ h2 {
     align-items: center;
 }
 
+/* .contactLinks {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 5vh;
+        justify-content: center;
+        align-content: center;
+} */
+
+
+.contactLinksContainer{
+    display: flex;
+}
+.contactLinksImg {
+    height: 20%;
+}
+
+#techStack {
+    opacity: 1;
+}
+
+.mainContent {
+    opacity: 1;
+}
