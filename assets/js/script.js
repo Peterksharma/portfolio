@@ -1,7 +1,6 @@
 //Tracks the mouse movement across the screen and logs the value
 const parrallax_effectl = document.querySelectorAll(".movement")
 const parrallax_effectr = document.querySelectorAll(".movementr")
-//Name + Title
 const nameTitle = document.querySelector(".about-me-name")
 //Navigation
 const hamburgerbtn = document.getElementById('hamburgerbtn')
