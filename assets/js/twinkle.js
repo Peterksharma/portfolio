@@ -1,10 +1,14 @@
+/*
+ * Original author: Jenny Bormacoff
+ * Source: https://codepen.io/Jenbo/pen/pgmZwB
+ */
+
+
 function Star(x, y, r, color) {
     this.x = x;
     this.y = y;
     this.r = r;
     this.rChange = 0.015;
-    //this.vx = Math.floor(Math.random()*4+1);
-    //this.vy = Math.floor(Math.random()*4+1);
     this.color = color;
 }
 
@@ -54,13 +58,7 @@ function update() {
 }
 function animate() {
     update();
-    /*
-      Remove comments below these for a cool trailing effect & comment
-      out the context.clearRect.
-    */
-    // context.fillStyle = 'rgba(255, 255, 255, .1)';
     context.fillStyle = 'rgba(1, 19, 41, 1)';
-    // context.fillRect(0,0,C_WIDTH,C_HEIGHT);
     context.clearRect(0, 0, C_WIDTH, C_HEIGHT);
     for (var i = 0; i < arrStars.length; i++) {
         arrStars[i].render();

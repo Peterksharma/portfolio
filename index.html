@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experienced developer showcasing skills in web development, software engineering, problem-solving and math. Thanks for stopping by.">
+    <meta name="description" content="Developer showcasing full stack developement skills. Thanks for stopping by!">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
     <link rel="stylesheet" href="./assets/css/home_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +23,11 @@
         <p id="my-title">Developer</p>
     </div>
     <div class="navigation hidden">
+        <div class="navLinks" id="returnHome">Home</div>
         <div class="navLinks" id="aboutMeLink"> About Me</div>
         <div class="navLinks" id="projectsLink">Projects</div>
-        <div class="navLinks" id="techStackLink">Tech Stack</div>
-        <div class="navLinks" id="resumeLink">Resume</div>
-        <div class="navLinks" id="contactMelink">Contact Me</div>
-        <div class="navLinks" id="returnHome">Home</div>
+        <a href="http://linkedin.com/in/peterksharma" target="_blank" class ="navLinks">Linked In</a>
+        <a href="https://github.com/Peterksharma" target="_blank" class ="navLinks">Git Hub</a> 
     </div>
     <div id="displayBoxMain" class="displayBoxMain hidden">
         <div class="mainContent">
@@ -75,15 +75,15 @@
                 </div>
             </div>
             <div class="projects details hidden" id="projects">
-                <div class="projectDisplayBox">
-                    <h2>Elevate Your Recipe</h2>
+                <div class="projectDisplayBox thumbnail1">
+                    <!-- <h2>Elevate Your Recipe</h2>
                     <div class="projectDetailDescription" id="elevateYourRecipe">
                         This is a Google Chrome Extention that scrapes web for bread recipes and converts them based
                         off of users location data
-                    </div>
+                    </div> -->
                 </div>
                 <div class="projectDisplayBox">
-                    <h2>The Great App Advisor</h2>
+                    <h2>Data-Structures Application</h2>
                     <div class="projectDetailDescription" id="dataStructureAdvisor">
                         This project uses Python and Langchain to advise you on what data structures are needed for the application you are building.
                     </div>
@@ -102,118 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="centeredContainer hidden" id="techStackContainer">
-                <div class="teckStackContainer">
-                    <h2>Tech Stack</h2>
-                    <div class='techStack details' id="techStack">
-                        <div class="stack" id="html">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                                <!-- target lets link open in new window -->
-                                <img src="./assets/images/icons/Tech-Stack-Logos/HTML.svg" class="stackImg" id="htmlImg"
-                                    alt="The logo for HTML5">
-                            </a>
-                            <h3>HTML</h3>
-                        </div>
-                        <div class="stack" id="css">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/CSS.svg" class="stackImg" id="cssImg"
-                                    alt="The logo for CSS">
-                            </a>
-                            <h3>CSS</h3>
-                        </div>
-                        <div class="stack" id="javascript">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/Javascript.svg" class="stackImg"
-                                    id="javascriptImg" alt="The logo for Javascript">
-                            </a>
-                            <h3>Javascript</h3>
-                        </div>
-                        <div class="stack" id="bootstrap">
-                            <a href="https://getbootstrap.com/" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/Bootstrap.svg" class="stackImg"
-                                    id="bootstrapImg" alt="The logo for Bootstrap">
-                            </a>
-                            <h3>Bootstrap</h3>
-                        </div>
-                        <div class="stack" id="node">
-                            <a href="https://nodejs.org/en" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/Node.svg" class="stackImg" id="nodeImg"
-                                    alt="The logo for NodeJS">
-                            </a>
-                            <h3>Node.Js</h3>
-                        </div>
-                        <div class="stack" id="jQuery">
-                            <a href="https://jquery.com/" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/JQuery.svg" class="stackImg"
-                                    id="jqueryImg" alt="The logo for Jquery">
-                            </a>
-                            <h3>JQuery</h3>
-                        </div>
-                        <div class="stack" id="sql">
-                            <a href="https://en.wikipedia.org/wiki/SQL/" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/SQL.svg" class="stackImg" id="sqlImg"
-                                    alt="The logo for SQL">
-                            </a>
-                            <h3>SQL</h3>
-                        </div>
-                        <div class="stack" id="express">
-                            <a href="https://expressjs.com/" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/Express.svg" class="stackImg"
-                                    id="expressImg" alt="The logo for ExpressJS">
-                            </a>
-                            <h3>Express.JS</h3>
-                        </div>
-                        <div class="stack" id="react">
-                            <a href="https://react.dev" target="_blank">
-                                <img src="./assets/images/icons/Tech-Stack-Logos/REACT.svg" class="stackImg"
-                                    id="reactImg" alt="The logo for ReachJS">
-                            </a>
-                            <h3>React.JS</h3>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-            <div class="resume details hidden" id="resume">
-                <!-- <embed width="400" height="600" name="plugin" src="./assets/resume/Resume-Peter-Sharma.pdf" type="application/pdf" id="resumeDocument"> -->
-                <!-- <object data="./assets/resume/Resume-Peter-Sharma.pdf" type="application/pdf" width="500" height="650">
-                        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./assets/resume/Resume-Peter-Sharma.pdf">Download PDF</a>.</p>
-                    </object> -->
-
-            </div>
-            <div class="contactMe details hidden" id="contactMe">
-                <div class="contactLinksContainer">
-                    <div class="contactLinks" id="phoneNumber">
-                        <a id="phoneNumber" href="tel:+13606439466">Call Me: +1.360.643.9466</a>
-                        <h4>Phone Number</h4>
-                    </div>
-                    <div class="contactLinks" id="email">
-                        <a href="mailto:peterksharma@gmail.com" target="_blank">
-                            <img src="./assets/images/icons/Email.svg" class="contactLinksImg" id="emailLinkImg"
-                                alt="This is an icon showing an electronic mail symbol.">
-                        </a>
-                        <h4>Email Me!</h4>
-                    </div>
-                    <div class="contactLinks" id="github">
-                        <a href="https://github.com/Peterksharma" target="_blank">
-                            <img src="./assets/images/icons/Github.svg" class="contactLinksImg" id="gitHubLinkImg"
-                                alt="This is an icon of a cat, the logo for GitHub.">
-                        </a>
-                        <h4>GitHub</h4>
-                    </div>
-                </div>
-                <div class="contactLinks" id="linkedIn">
-                    <a href="https://www.linkedin.com/in/peterksharma" target="_blank">
-                        <img src="./assets/images/icons/Linked-in.svg" class="contactLinksImg" id="linkedLinkImg"
-                            alt="This is an icon of the company Linked-In. ">
-                    </a>
-                    <h4>Linked-In</h4>
-                </div>
-            </div>
         </div>
-
     </div>
     </div>
     <div class="visuals">

@@ -11,7 +11,6 @@ const projectsLink = document.getElementById('projectsLink')
 const techStackLink = document.getElementById('techStackLink')
 const techStackContainer = document.getElementById('techStackContainer')
 const resumeLink = document.getElementById('resumeLink')
-const contactMeLink = document.getElementById('contactMelink')
 const homeLink = document.getElementById('returnHome')
 //Consts for the main content
 const mainContent = document.querySelectorAll('.mainContent')
@@ -19,7 +18,6 @@ const aboutMeContent = document.getElementById('aboutMeContent')
 const projects = document.getElementById('projects')
 const techStack = document.getElementById('techStack')
 const resume = document.getElementById('resume')
-const contactMe = document.getElementById('contactMe')
 
 //Black Display Box for the main content data
 const mainBox = document.querySelector('.displayBoxMain')
@@ -88,57 +86,16 @@ function unhideProjects () {
     projects.style.animation = "fadeIn 2s forwards"
 }
 
-function unhideTechStack () {
-    techStackContainer.classList.remove('hidden');
-    techStackContainer.style.animation = "fadeIn 2s forwards"
-}
-
-function unhideResume () {
-    resume.classList.remove('hidden');
-    resume.style.animation = "fadeIn 2s forwards"
-}
-
-function unhideContactMe () {
-    contactMe.classList.remove('hidden');
-    contactMe.style.animation = "fadeIn 2s forwards"
-}
-
 //functions to hide content to not overlap other content
 function hideallthatisntAboutMeContent () {
     projects.classList.add('hidden');
-    techStackContainer.classList.add('hidden');
-    resume.classList.add('hidden');
-    contactMe.classList.add('hidden');
 }
 
-function hideAllThatIsntTechStackContainer () {
-    aboutMeContent.classList.add('hidden');
-    projects.classList.add('hidden');
-    resume.classList.add('hidden');
-    contactMe.classList.add('hidden');
-}
 
 function hideAllThatIsntProjects () {
     aboutMeContent.classList.add('hidden');
     techStackContainer.classList.add('hidden');
-    resume.classList.add('hidden');
-    contactMe.classList.add('hidden');
 }
-
-function hideAllThatIsntResume () {
-    aboutMeContent.classList.add('hidden');
-    techStackContainer.classList.add('hidden');
-    projects.classList.add('hidden');
-    contactMe.classList.add('hidden');
-}
-
-function hideAllThatIsntContactMe () {
-    aboutMeContent.classList.add('hidden');
-    techStackContainer.classList.add('hidden');
-    projects.classList.add('hidden');
-    resume.classList.add('hidden');
-}
-
 
 //About Me, when clicked will hide the home screen and display the content box
 aboutMeLink.addEventListener('click', function() {
@@ -169,49 +126,6 @@ projectsLink.addEventListener('click', function() {
         hideAllThatIsntProjects();
         unhideProjects();
         console.log('stage 6')
-    }
-})
-
-//Tech Stack
-techStackLink.addEventListener('click', function() {
-    if (!nameTitle.classList.contains('hidden')) {
-        hideNameShowBox ();
-        unhideTechStack ();
-    } else if (!techStackContainer.classList.contains('hidden')){
-        techStackContainer.classList.add('hidden')
-        console.log('button 2')
-    } else {
-        hideAllThatIsntTechStackContainer ();
-        unhideTechStack ();
-        console.log('button 3')
-    }
-})
-//Resume
-resumeLink.addEventListener('click', function() {
-    if (!nameTitle.classList.contains('hidden')) {
-        hideNameShowBox ();
-        unhideResume ();
-    } else if (!resume.classList.contains('hidden')){
-        resume.classList.add('hidden')
-        console.log('button 2')
-    } else {
-        hideAllThatIsntResume ();
-        unhideResume();
-        console.log('button 3')
-    }
-})
-//Contact Me
-contactMeLink.addEventListener('click', function() {
-    if (!nameTitle.classList.contains('hidden')) {
-        hideNameShowBox ();
-        unhideContactMe ();
-    } else if (!contactMe.classList.contains('hidden')){
-        contactMe.classList.add('hidden')
-        console.log('button 2')
-    } else {
-        hideAllThatIsntContactMe ();
-        unhideContactMe();
-        console.log('button 3')
     }
 })
 
