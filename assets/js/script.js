@@ -26,6 +26,34 @@ const mainBox = document.querySelector('.displayBoxMain')
 let xValue = 0,
     yValue = 0;
 
+    // Check if DeviceOrientationEvent is supported
+if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function(event) {
+        // alpha: rotation around z-axis
+        let rotateDegrees = event.alpha;
+        // gamma: left to right
+        let leftToRight = event.gamma;
+        // beta: front back motion
+        let frontToBack = event.beta;
+
+        // Here, you can use leftToRight and frontToBack values to apply a transform on your elements, similar to your previous mousemove parallax effect
+        parrallax_effectl.forEach((el) => {
+            let speedx = el.dataset.speedx;
+            let speedy = el.dataset.speedy;
+            el.style.transform = `translateX(calc(-5% + ${-leftToRight * speedx}px)) translateY(calc(-5% + ${-frontToBack * speedy}px))`;
+        });
+
+        parrallax_effectr.forEach((el) => {
+            let speedx1 = el.dataset.speedx1;
+            let speedy1 = el.dataset.speedy1;
+            el.style.transform = `translateX(calc(${leftToRight * speedx1}px)) translateY(calc(${frontToBack * speedy1}px))`;
+        });
+    }, true);
+} else {
+    
+    // Fallback for browsers that don't support DeviceOrientationEvent
+}
+
 window.addEventListener('mousemove', (e) => {
     xValue = e.clientX - window.innerWidth / 2;
     yValue = e.clientY - window.innerHeight / 2;
@@ -42,6 +70,7 @@ window.addEventListener('mousemove', (e) => {
         el.style.transform = `translateX(calc(${(xValue - (window.innerWidth / 2)) * speedx1}px)) translateY(calc(${(yValue - (window.innerHeight / 2)) * speedy1}px))`;
     })
 })
+
 
 //Navigation
 
